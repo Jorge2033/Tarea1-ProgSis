@@ -1,0 +1,14 @@
+Grupo #1
+
+Líder: Gaibor Onofre Jorge, Ingeniería en Computación
+Motivo: Tiene buen liderazgo
+
+Pasaca Paladines Noelia, Ingeniería en Computación
+Veliz Calero Danny, Ingeniería en Computación
+
+División del grupo
+Danny: Implementación de funciones y main
+Noelia: Creación de estructuras e implementación de funciones
+Jorge: Declaración de funciones e implementación de funciones y main
+
+Link video Explicacion:https://espolec-my.sharepoint.com/:f:/g/personal/jegaibor_espol_edu_ec/Eu7xCXbPTMNAtdnvSvsDtXUBUItO0K2KqcGGC1iBYmsQHg?e=fXyPje
