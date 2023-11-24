@@ -1,26 +1,20 @@
 #include <stdio.h>
 #include <string.h>
 #include "funciones.h"
-
-
 struct Usuario crearUsuario() {
   struct Usuario usuario;
-
   printf("Ingrese el cargo del usuario: ");
   scanf("%s", usuario.cargo);
   printf("Ingrese la clave del usuario: ");
   scanf("%s", usuario.clave);
-
   return usuario;
 }
-
 void actualizarUsuario(struct Usuario usuario) {
   printf("Ingrese el nuevo cargo del usuario: ");
   scanf("%s", usuario.cargo);
   printf("Ingrese la nueva clave del usuario: ");
   scanf("%s", usuario.clave);
 }
-
 struct Producto crearProducto() {
   struct Producto producto;
   printf("Ingrese el nombre del producto: ");
@@ -40,13 +34,12 @@ struct Producto crearProducto() {
 
   printf("Ingrese el precio del producto: ");
   scanf("%f", &producto.precioCompra);
-
+  
   printf("Ingrese la bodega del producto: ");
-  scanf(" %c", &producto.bodega);
+  scanf(" %c", producto.bodega);
   producto.cantidadProducto++;
   return producto;
 }
-
 void actualizarProducto(struct Producto producto) {
   printf("Ingrese el nuevo nombre del producto: ");
   scanf("%s", producto.nombre);
@@ -63,9 +56,9 @@ void actualizarProducto(struct Producto producto) {
   printf("Ingrese la nueva bodega del producto: ");
   scanf(" %s", producto.bodega);
 }
-
-int MenuPrincipal(struct Usuario usuario, struct Producto producto) {
+/*int MenuPrincipal(struct Usuario usuarios[], struct Producto productos[]) {
   char opcion[30];
+  struct Usuario usuario;
   printf("Bienvenido al sistema\n");
   printf("Ingrese su cargo (administrador, bodeguero, vendedor): ");
   scanf("%s", opcion);
@@ -77,7 +70,13 @@ int MenuPrincipal(struct Usuario usuario, struct Producto producto) {
     scanf("%d", &seleccion);
     switch (seleccion) {
       case 1:
-        crearUsuario();
+        usuario= crearUsuario();
+        int cantidadElementos = 0;
+        for (int i = 0; i < sizeof(usuarios) / sizeof(usuarios[0]); ++i) {
+            cantidadElementos++;
+        }
+        usuarios[cantidadElementos]=usuario;
+        printf("Usuario : %s\n", usuarios[cantidadElementos].cargo);
         printf("1. crear otro usuario\n");
         printf("2. salir\n");
         int seleccion2;
@@ -87,7 +86,7 @@ int MenuPrincipal(struct Usuario usuario, struct Producto producto) {
           crearUsuario();
           break;
           case 2:
-          MenuPrincipal(usuario,producto);
+          MenuPrincipal(usuarios,productos);
           break;
         }
         break;
@@ -106,7 +105,7 @@ int MenuPrincipal(struct Usuario usuario, struct Producto producto) {
           crearUsuario();
           break;
           case 3:
-          MenuPrincipal(usuario,producto);
+          MenuPrincipal(usuarios,productos);
           break;
         break;
       }
@@ -125,14 +124,14 @@ int MenuPrincipal(struct Usuario usuario, struct Producto producto) {
         scanf("%d",&opcion);
         switch(opcion){
           case 1:
-          MenuPrincipal(usuario,producto);
+          //MenuPrincipal(usuario,producto);
           break;
           case 2:
           crearUsuario();
           break;
           default:
           printf("Opción inválida\n");
-            MenuPrincipal(usuario,producto);
+           // MenuPrincipal(usuario,producto);
           break;
         }
         break;
@@ -144,7 +143,7 @@ int MenuPrincipal(struct Usuario usuario, struct Producto producto) {
         scanf("%d",&eleccion);
         switch(eleccion){
           case 1:
-          MenuPrincipal(usuario,producto);
+         // MenuPrincipal(usuario,producto);
           break;
           case 2:
             actualizarUsuario(usuario);
@@ -153,7 +152,7 @@ int MenuPrincipal(struct Usuario usuario, struct Producto producto) {
         break;
       default:
         printf("Opción inválida\n");
-          MenuPrincipal(usuario,producto);
+          //MenuPrincipal(usuario,producto);
     }
     }
   } else if (strcmp(opcion, "vendedor") == 0) {
@@ -164,22 +163,22 @@ int MenuPrincipal(struct Usuario usuario, struct Producto producto) {
     scanf("%d", &posibilidad);
     switch (posibilidad) {
       case 1:
-        venderProducto(producto);
+        //venderProducto(producto);
         printf("1.vender otro producto\n");
         printf("2.salir\n");
         int choice;
         scanf("%d",&choice);
         switch (choice){
           case 1:
-          venderProducto(producto);
+          //venderProducto(producto);
           break;
           case 2:
-          MenuPrincipal(usuario,producto);
+         // MenuPrincipal(usuario,producto);
           break;
         }
         break;
       case 2:
-      MenuPrincipal(usuario,producto);
+     // MenuPrincipal(usuario,producto);
       break;
       
       default:
@@ -188,12 +187,10 @@ int MenuPrincipal(struct Usuario usuario, struct Producto producto) {
     }
   } else {
     printf("Opción inválida\n");
-    MenuPrincipal(usuario,producto);
+   // MenuPrincipal(usuario,producto);
   }
   return 0;
-}
-
-
+}*/
 struct Venta venderProducto(struct Producto producto) {
   struct Venta venta;
 
@@ -212,4 +209,71 @@ struct Venta venderProducto(struct Producto producto) {
       producto.cantidadProducto - venta.cantidadProducto;
 
   return venta;
+}
+void leerUsuarios(struct Usuario usuarios[]) {
+  FILE *file = fopen("usuarios.txt", "r");
+  if (file == NULL) {
+    printf("Error opening file\n");
+    return;
+  }
+
+  int i = 0;
+  while (fscanf(file, "%s %s", usuarios[i].cargo, usuarios[i].clave) != EOF) {
+    i++;
+  }
+// EOF - End Of File
+  fclose(file);
+}
+
+void escribirUsuarios(struct Usuario usuarios[]) {
+  FILE *file = fopen("usuarios.txt", "w");
+  if (file == NULL) {
+    printf("Error opening file\n");
+    return;
+  }
+
+  for (int i = 0; i < 10; i++) {
+    if (usuarios[i].cargo[0] != '\0') {
+      fprintf(file, "%s %s\n", usuarios[i].cargo, usuarios[i].clave);
+    }
+  }
+
+  fclose(file);
+}
+
+void leerProductos(struct Producto productos[]) {
+  FILE *file = fopen("productos.txt", "r");
+  if (file == NULL) {
+    printf("Error opening file\n");
+    return;
+  }
+  // Leer los datos del archivo y llenar el arreglo de productos
+  fclose(file);
+}
+void escribirProductos(struct Producto productos[]) {
+  FILE *file = fopen("productos.txt", "w");
+  if (file == NULL) {
+    printf("Error opening file\n");
+    return;
+  }
+  // Escribir los datos del arreglo de productos al archivo
+  fclose(file);
+}
+void leerVentas(struct Venta ventas[]) {
+  FILE *file = fopen("ventas.txt", "r");
+  if (file == NULL) {
+    printf("Error opening file\n");
+    return;
+  }
+  // Leer los datos del archivo y llenar el arreglo de ventas
+  fclose(file);
+}
+void escribirVentas(struct Venta ventas[]) {
+  FILE *file = fopen("ventas.txt", "w");
+  if (file == NULL) {
+    printf("Error opening file\n");
+    return;
+  }
+  // Escribir los datos del arreglo de ventas al archivo
+  fclose(file);
 }

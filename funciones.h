@@ -29,5 +29,10 @@ void actualizarUsuario(struct Usuario);
 struct Producto crearProducto();
 void actualizarProducto(struct Producto);
 struct Venta venderProducto(struct Producto);
-int MenuPrincipal(struct Usuario usuario, struct Producto producto);
-
+int MenuPrincipal(struct Usuario usuarios[], struct Producto productos[]);
+void leerUsuarios(struct Usuario usuarios[]);
+void escribirUsuarios(struct Usuario usuarios[]);
+void leerProductos(struct Producto productos[]);
+void escribirProductos(struct Producto productos[]);
+void leerVentas(struct Venta ventas[]);
+void escribirVentas(struct Venta ventas[]);

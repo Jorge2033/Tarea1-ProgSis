@@ -1,16 +1,28 @@
-all: main
+# Makefile
 
-CC = clang
-override CFLAGS += -g -Wno-everything -pthread -lm
+# Nombre del ejecutable
+TARGET = mi_proyecto
 
-SRCS = $(shell find . -name '.ccls-cache' -type d -prune -o -type f -name '*.c' -print)
-HEADERS = $(shell find . -name '.ccls-cache' -type d -prune -o -type f -name '*.h' -print)
+# Compilador
+CC = gcc
 
-main: $(SRCS) $(HEADERS)
-	$(CC) $(CFLAGS) $(SRCS) -o "$@"
+# Opciones de compilación
+CFLAGS = -Wall -Wextra -pedantic -std=c99
 
-main-debug: $(SRCS) $(HEADERS)
-	$(CC) $(CFLAGS) -O0 $(SRCS) -o "$@"
+# Archivos fuente
+SRCS = main.c Funciones.c
 
+# Archivos objeto generados durante la compilación
+OBJS = $(SRCS:.c=.o)
+
+# Regla principal para construir el ejecutable
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^
+
+# Regla para compilar archivos fuente a archivos objeto
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+# Eliminar archivos objeto y el ejecutable
 clean:
-	rm -f main main-debug
+	rm -f $(OBJS) $(TARGET)
