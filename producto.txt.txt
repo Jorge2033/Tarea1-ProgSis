@@ -1,0 +1,35 @@
+Aceite de Oliva, Alimentación, Olivar de Oro, 12345, 50, 10.5, Bodega A
+Laptop Ultrabook, Electrónica, TechMaster, 67890, 30, 8.75, Bodega B
+Zapatos Deportivos, Moda, FootFlex, 13579, 25, 15.0, Bodega C
+Café Colombia, Alimentación, BrewMasters, 24680, 40, 12.25, Bodega A
+Cámara DSLR, Electrónica, SnapShot, 54321, 20, 9.99, Bodega B
+Vino Tinto Reserva, Bebidas, VinoElite, 98765, 35, 14.75, Bodega C
+Mochila Antirrobo, Moda, SecureStyle, 11223, 15, 11.0, Bodega A
+Smartwatch Fitness, Electrónica, FitGear, 33445, 28, 13.5, Bodega B
+Silla de Oficina, Muebles, ComfortMax, 55667, 42, 10.75, Bodega C
+Chocolate Artesanal, Alimentación, SweetIndulge, 77889, 18, 16.5, Bodega A
+Bicicleta de Montaña, Deportes, TrailBlazer, 99000, 33, 12.0, Bodega B
+Vestido de Noche, Moda, EleganceChic, 11223, 22, 9.25, Bodega C
+Auriculares Inalámbricos, Electrónica, SonicBeats, 44556, 38, 11.99, Bodega A
+Mueble de TV Moderno, Muebles, TrendyHome, 66778, 27, 14.25, Bodega B
+Whisky Single Malt, Bebidas, HighlandSpirit, 88999, 12, 17.0, Bodega C
+Impresora Multifunción, Electrónica, PrintPro, 00112, 48, 13.75, Bodega A
+Sartén Antiadherente, Hogar, CookMaster, 22334, 21, 10.0, Bodega B
+Perfume Floral, Belleza, FragranceGlow, 44556, 36, 15.5, Bodega C
+Zapatillas Urbanas, Moda, StreetStyle, 66778, 29, 12.75, Bodega A
+Tequila Reposado, Bebidas, AgaveHarvest, 88999, 45, 18.5, Bodega B
+Portátil Gaming, Electrónica, GameMaster, 11223, 17, 11.25, Bodega C
+Mesa de Comedor Extensible, Muebles, ExtendableLiving, 33445, 31, 14.99, Bodega A
+Reloj de Pulsera Elegante, Moda, TimeElegance, 55667, 24, 16.25, Bodega B
+Aspiradora Robótica, Hogar, RoboClean, 77889, 39, 13.0, Bodega C
+Altavoces Bluetooth, Electrónica, SoundWave, 99000, 26, 10.5, Bodega A
+Caja de Herramientas Profesional, Herramientas, ToolTech, 11223, 41, 15.75, Bodega B
+Cafetera Espresso Automática, Electrodomésticos, EspressoDeluxe, 33445, 32, 12.0, Bodega C
+Mochila de Cuero, Moda, LeatherCraft, 55667, 19, 17.5, Bodega A
+Smart TV 4K, Electrónica, VisionX, 77889, 34, 14.25, Bodega B
+Robot de Cocina Multifunción, Electrodomésticos, CookBot, 99000, 23, 9.5, Bodega C
+Set de Maquillaje Profesional, Belleza, GlamourKit, 11223, 37, 16.0, Bodega A
+Hidratante Facial, Belleza, SkinRevive, 33445, 44, 11.75, Bodega B
+Bicicleta Eléctrica Plegable, Deportes, EcoRide, 55667, 20, 18.25, Bodega C
+Cargador Inalámbrico, Electrónica, PowerCharge, 77889, 28, 13.5, Bodega A
+Lámpara de Pie Moderna, Iluminación, LuxeLight, 99000, 15, 10.0, Bodega B

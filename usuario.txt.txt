@@ -1,0 +1,37 @@
+Rol, usuario, y clave
+Vendedor, usuario1, clave123
+Bodeguero, usuario2, clave456
+Administrador, usuario3, clave789
+Vendedor, usuario4, claveabc
+Bodeguero, usuario5, clavedef
+Administrador, usuario6, claveghi
+Vendedor, usuario7, clavejkl
+Bodeguero, usuario8, clavemno
+Administrador, usuario9, clavepqr
+Vendedor, usuario10, claves123
+Bodeguero, usuario11, claved456
+Administrador, usuario12, clave789abc
+Vendedor, usuario13, claveabc123
+Bodeguero, usuario14, clave456def
+Administrador, usuario15, clave789ghi
+Vendedor, usuario16, clavejklmno
+Bodeguero, usuario17, clavemnopqr
+Administrador, usuario18, clavepqrstuv
+Vendedor, usuario19, claves123abc
+Bodeguero, usuario20, claved456defg
+Administrador, usuario21, clave789abcdefgh
+Vendedor, usuario22, claveabc123ijkl
+Bodeguero, usuario23, clave456defmnop
+Administrador, usuario24, clave789ghijklm
+Vendedor, usuario25, clavejklmnopqrs
+Bodeguero, usuario26, clavemnopqrst
+Administrador, usuario27, clavepqrstuvwxy
+Vendedor, usuario28, claves123abcdef
+Bodeguero, usuario29, claved456ghijkl
+Administrador, usuario30, clave789abcdefghijkl
+Vendedor, usuario31, claveabc123mnopqr
+Bodeguero, usuario32, clave456defghijkl
+Administrador, usuario33, clave789abcdefghijklmno
+Vendedor, usuario34, clavejklmnopqrstuv
+Bodeguero, usuario35, clavemnopqrstuvwxyz
+
